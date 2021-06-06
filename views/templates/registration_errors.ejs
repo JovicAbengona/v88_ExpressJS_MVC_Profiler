@@ -1,0 +1,15 @@
+<% if(typeof alert != "undefined"){
+        if(alert[0].type == "error"){
+            alert[0].msg.forEach((error) => { %>
+                <p class="error"><%= error.message %></p>
+<%          });    
+        }
+        else{ %>
+            <p class="success"><%= alert[0].msg %></p>
+<%      } %>
+        <h3>Profiler</h3>
+        <p class="profiler_details">URL: <span><%= alert[1].url %></span></p>
+        <p class="profiler_details">Method: <span><%= alert[1].method %></span></p>
+        <p class="profiler_details">Memory Used: <span><%= alert[1].memory %></span></p>
+<%  } 
+%>
